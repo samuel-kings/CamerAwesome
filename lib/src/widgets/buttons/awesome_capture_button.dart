@@ -7,10 +7,12 @@ import 'package:flutter/services.dart';
 
 class AwesomeCaptureButton extends StatefulWidget {
   final CameraState state;
+  final Function()? onTap;
 
   const AwesomeCaptureButton({
     super.key,
     required this.state,
+    this.onTap,
   });
 
   @override
@@ -75,6 +77,8 @@ class _AwesomeCaptureButtonState extends State<AwesomeCaptureButton>
   }
 
   _onTapDown(TapDownDetails details) {
+    widget.onTap?.call();
+
     HapticFeedback.selectionClick();
     _animationController.forward();
   }
