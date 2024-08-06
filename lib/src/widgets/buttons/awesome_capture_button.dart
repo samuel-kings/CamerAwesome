@@ -13,7 +13,7 @@ class AwesomeCaptureButton extends StatefulWidget {
   const AwesomeCaptureButton({
     super.key,
     required this.state,
-    this.onStartRecording;,
+    this.onStartRecording,
     this.onStopRecording,
   });
 
