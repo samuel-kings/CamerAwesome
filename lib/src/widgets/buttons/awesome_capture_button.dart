@@ -79,8 +79,6 @@ class _AwesomeCaptureButtonState extends State<AwesomeCaptureButton>
   }
 
   _onTapDown(TapDownDetails details) {
-    widget.onTap?.call();
-
     HapticFeedback.selectionClick();
     _animationController.forward();
   }
